@@ -1,4 +1,3 @@
-
 {
   "version": 2,
   "builds": [
@@ -9,7 +8,9 @@
     {
       "src": "triplog_frontend/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "build" }
+      "config": {
+        "distDir": "build" 
+      }
     }
   ],
   "routes": [
@@ -22,8 +23,12 @@
       "dest": "/triplog_frontend/build/static/$1"
     },
     {
-      "src": "/(.*\\..*)",
-      "dest": "/triplog_frontend/build/$1"
+      "src": "/favicon.ico",
+      "dest": "/triplog_frontend/build/favicon.ico"
+    },
+    {
+      "src": "/manifest.json",
+      "dest": "/triplog_frontend/build/manifest.json"
     },
     {
       "src": "/(.*)",
