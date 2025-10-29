@@ -1,3 +1,4 @@
+
 {
   "version": 2,
   "builds": [
@@ -7,7 +8,8 @@
     },
     {
       "src": "triplog_frontend/package.json",
-      "use": "@vercel/static-build"
+      "use": "@vercel/static-build",
+      "config": { "distDir": "build" }
     }
   ],
   "routes": [
@@ -17,15 +19,15 @@
     },
     {
       "src": "/static/(.*)",
-      "dest": "/triplog_frontend/static/$1"
+      "dest": "/triplog_frontend/build/static/$1"
     },
     {
       "src": "/(.*\\..*)",
-      "dest": "/triplog_frontend/$1"
+      "dest": "/triplog_frontend/build/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/triplog_frontend/index.html"
+      "dest": "/triplog_frontend/build/index.html"
     }
   ]
 }
