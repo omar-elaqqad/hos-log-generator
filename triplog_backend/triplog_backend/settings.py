@@ -131,4 +131,5 @@ CORS_ALLOW_ALL_ORIGINS = True
 ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
 
 
-CSRF_TRUSTED_ORIGINS = ['https://hos-log-generator-j8c1-9rx6h3wu1-omars-projects-82c87dc4.vercel.app/']
+if VERCEL_URL := os.environ.get('VERCEL_URL'):
+    CSRF_TRUSTED_ORIGINS = [f'https://{VERCEL_URL}']
