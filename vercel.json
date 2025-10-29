@@ -7,32 +7,33 @@
     },
     {
       "src": "triplog_frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "outputDirectory": "build"
-      }
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
-  {
-    "src": "/api/(.*)",
-    "dest": "triplog_backend/triplog_backend/wsgi.py"
-  },
-  {
-    "src": "/static/(.*)",
-    "dest": "/static/$1"
-  },
-  {
-    "src": "/favicon.ico",
-    "dest": "/favicon.ico"
-  },
-  {
-    "src": "/manifest.json",
-    "dest": "/manifest.json"
-  },
-  {
-    "src": "/(.*)",
-    "dest": "/index.html"
-  }
-]
+    {
+      "src": "/api/(.*)",
+      "dest": "triplog_backend/triplog_backend/wsgi.py"
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "/triplog_frontend/static/$1"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/triplog_frontend/favicon.ico"
+    },
+    {
+      "src": "/manifest.json",
+      "dest": "/triplog_frontend/manifest.json"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/triplog_frontend/robots.txt"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/triplog_frontend/index.html"
+    }
+  ]
 }
