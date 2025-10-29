@@ -9,7 +9,7 @@
       "src": "triplog_frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build" 
+        "distDir": "build"
       }
     }
   ],
@@ -20,19 +20,31 @@
     },
     {
       "src": "/static/(.*)",
-      "dest": "/triplog_frontend/build/static/$1"
+      "dest": "/triplog_frontend/static/$1"
     },
     {
       "src": "/favicon.ico",
-      "dest": "/triplog_frontend/build/favicon.ico"
+      "dest": "/triplog_frontend/favicon.ico"
+    },
+    {
+      "src": "/logo192.png",
+      "dest": "/triplog_frontend/logo192.png"
+    },
+    {
+      "src": "/logo512.png",
+      "dest": "/triplog_frontend/logo512.png"
     },
     {
       "src": "/manifest.json",
-      "dest": "/triplog_frontend/build/manifest.json"
+      "dest": "/triplog_frontend/manifest.json"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/triplog_frontend/robots.txt"
     },
     {
       "src": "/(.*)",
-      "dest": "/triplog_frontend/build/index.html"
+      "dest": "/triplog_frontend/index.html"
     }
   ]
 }
