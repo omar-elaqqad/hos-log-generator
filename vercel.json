@@ -4,23 +4,12 @@
     {
       "src": "triplog_backend/triplog_backend/wsgi.py",
       "use": "@vercel/python"
-    },
-    {
-      "src": "triplog_frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "outputDirectory": "build"
-      }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "triplog_backend/triplog_backend/wsgi.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/triplog_frontend/build/$1"
+      "source": "/api/(.*)",
+      "destination": "triplog_backend/triplog_backend/wsgi.py"
     }
   ]
 }
