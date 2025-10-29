@@ -16,8 +16,16 @@
       "dest": "triplog_backend/triplog_backend/wsgi.py"
     },
     {
+      "src": "/static/(.*)",
+      "dest": "/triplog_frontend/static/$1"
+    },
+    {
+      "src": "/(.*\\..*)",
+      "dest": "/triplog_frontend/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/triplog_frontend/index.html"
     }
   ]
 }
