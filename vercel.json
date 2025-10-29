@@ -10,7 +10,7 @@
       "use": "@vercel/static-build",
       "config": {
 
-        "outputDirectory": "triplog_frontend/build"
+        "buildCommand": "cd triplog_frontend && npm install && npm run build"
       }
     }
   ],
@@ -20,6 +20,7 @@
       "dest": "triplog_backend/triplog_backend/wsgi.py"
     },
     {
+
       "src": "/(.*)",
       "dest": "triplog_frontend/build/$1"
     }
