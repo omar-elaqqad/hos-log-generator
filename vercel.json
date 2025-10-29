@@ -14,25 +14,25 @@
     }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "triplog_backend/triplog_backend/wsgi.py"
-    },
-    {
-      "src": "/static/(.*)",
-      "dest": "triplog_frontend/build/static/$1"
-    },
-    {
-      "src": "/favicon.ico",
-      "dest": "triplog_frontend/build/favicon.ico"
-    },
-    {
-      "src": "/manifest.json",
-      "dest": "triplog_frontend/build/manifest.json"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "triplog_frontend/build/index.html"
-    }
-  ]
+  {
+    "src": "/api/(.*)",
+    "dest": "triplog_backend/triplog_backend/wsgi.py"
+  },
+  {
+    "src": "/static/(.*)",
+    "dest": "/static/$1"
+  },
+  {
+    "src": "/favicon.ico",
+    "dest": "/favicon.ico"
+  },
+  {
+    "src": "/manifest.json",
+    "dest": "/manifest.json"
+  },
+  {
+    "src": "/(.*)",
+    "dest": "/index.html"
+  }
+]
 }
