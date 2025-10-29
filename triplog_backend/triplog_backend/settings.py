@@ -25,7 +25,6 @@ SECRET_KEY = 'django-insecure-vqxouah^^fkc&t@5zjcle9hr0$ht5nmx3qu-y-x##v6_3^mff0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -124,4 +123,13 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://hos-log-generator-j8c1-q1vjx9alj-omars-projects-82c87dc4.vercel.app/']
+CORS_ALLOW_ALL_ORIGINS = True
+
+ALLOWED_HOSTS = [
+    'hos-log-generator-j8c1.vercel.app', 
+    'hos-log-generator-j8c1-q1vjx9alj-omars-projects-82c87dc4.vercel.app', 
+    '.vercel.app' 
+]
+
+
+CSRF_TRUSTED_ORIGINS = ['https://hos-log-generator-j8c1-q1vjx9alj-omars-projects-82c87dc4.vercel.app']
