@@ -132,4 +132,4 @@ ALLOWED_HOSTS = [
 ]
 
 
-CSRF_TRUSTED_ORIGINS = ['https://hos-log-generator-j8c1-q1vjx9alj-omars-projects-82c87dc4.vercel.app']
+CSRF_TRUSTED_ORIGINS = ['https://hos-log-generator-j8c1-9rx6h3wu1-omars-projects-82c87dc4.vercel.app/']
