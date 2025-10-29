@@ -131,5 +131,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
 
 
+CSRF_TRUSTED_ORIGINS = []
+
 if VERCEL_URL := os.environ.get('VERCEL_URL'):
-    CSRF_TRUSTED_ORIGINS = [f'https://{VERCEL_URL}']
+    CSRF_TRUSTED_ORIGINS.append(f'https://{VERCEL_URL}')
