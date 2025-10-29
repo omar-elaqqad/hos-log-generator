@@ -9,8 +9,7 @@
       "src": "triplog_frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-
-        "buildCommand": "cd triplog_frontend && npm install && npm run build"
+        "outputDirectory": "build"
       }
     }
   ],
@@ -21,8 +20,12 @@
     },
     {
 
+      "handle": "filesystem"
+    },
+    {
+
       "src": "/(.*)",
-      "dest": "triplog_frontend/build/$1"
+      "dest": "triplog_frontend/build/index.html"
     }
   ]
 }
