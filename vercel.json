@@ -32,6 +32,10 @@
       "dest": "/triplog_frontend/robots.txt"
     },
     {
+      "src": "/(.*\\..*)",
+      "dest": "/triplog_frontend/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/triplog_frontend/index.html"
     }
