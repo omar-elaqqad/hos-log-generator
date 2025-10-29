@@ -3,13 +3,14 @@
   "builds": [
     {
       "src": "triplog_backend/triplog_backend/wsgi.py",
-      "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+      "use": "@vercel/python"
     },
     {
+
       "src": "triplog_frontend/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "triplog_frontend/build" }
+
+      "config": { "outputDirectory": "build" }
     }
   ],
   "routes": [
