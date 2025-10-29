@@ -7,7 +7,7 @@
       "config": { "distDir": "build" }
     },
     {
-      "src": "build.sh",
+      "src": "triplog_backend/triplog_backend/wsgi.py",
       "use": "@vercel/python"
     }
   ],
@@ -26,7 +26,7 @@
     },
     {
       "src": "/api/(.*)",
-      "dest": "build.sh"
+      "dest": "triplog_backend/triplog_backend/wsgi.py"
     },
     {
       "src": "/(.*)",
