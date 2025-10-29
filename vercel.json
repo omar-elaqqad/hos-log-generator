@@ -6,11 +6,12 @@
       "use": "@vercel/python"
     },
     {
-
       "src": "triplog_frontend/package.json",
       "use": "@vercel/static-build",
+      "config": {
 
-      "config": { "outputDirectory": "build" }
+        "outputDirectory": "triplog_frontend/build"
+      }
     }
   ],
   "routes": [
