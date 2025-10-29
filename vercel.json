@@ -16,40 +16,8 @@
       "dest": "triplog_backend/triplog_backend/wsgi.py"
     },
     {
-      "src": "/static/(.*)",
-      "dest": "/triplog_frontend/static/$1"
-    },
-    {
-      "src": "/favicon.ico",
-      "dest": "/triplog_frontend/favicon.ico"
-    },
-    {
-      "src": "/manifest.json",
-      "dest": "/triplog_frontend/manifest.json"
-    },
-    {
-      "src": "/robots.txt",
-      "dest": "/triplog_frontend/robots.txt"
-    },
-    {
-      "src": "/logo192.png",
-      "dest": "/triplog_frontend/logo192.png"
-    },
-    {
-      "src": "/logo512.png",
-      "dest": "/triplog_frontend/logo512.png"
-    },
-    {
-      "src": "/asset-manifest.json",
-      "dest": "/triplog_frontend/asset-manifest.json"
-    },
-    {
-      "src": "/triplog_frontend/(.*)",
-      "dest": "/triplog_frontend/$1"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/triplog_frontend/index.html"
+      "dest": "/index.html"
     }
   ]
 }
