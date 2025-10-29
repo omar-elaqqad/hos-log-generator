@@ -2,8 +2,7 @@
 
 import axios from "axios";
 
-/* The base URL of the Django backend.*/
-const BASE_URL = "http://127.0.0.1:8000/api";
+const BASE_URL = "/api";
 
 /* This function handles the communication between the React frontend and the Django backend. */
 export const createTrip = async (tripData) => {
@@ -16,11 +15,10 @@ export const createTrip = async (tripData) => {
       current_location: tripData.currentLocation,
       pickup_location: tripData.pickupLocation,
       dropoff_location: tripData.dropoffLocation,
-      start_date: today, /* The start date is set to today. */
+      start_date: today, /* The start date is automatically set to today. */
       current_cycle_used_hours: tripData.cycleUsedHours,
     };
 
-    /* Use axios to send a POST request to the backend's '/trips/' endpoint with the payload. */
     const response = await axios.post(`${BASE_URL}/trips/`, payload);
     
     /* Return the data from the backend's response, which contains the full trip plan. */
