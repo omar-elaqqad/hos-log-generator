@@ -2,11 +2,15 @@
   "version": 2,
   "builds": [
     {
-      "src": "triplog_backend/triplog_backend/wsgi.py",
-      "use": "@vercel/python",
+      "src": "vercel-build.sh",
+      "use": "@vercel/static-build",
       "config": {
-        "includeFiles": ["../../requirements.txt"]
+        "distDir": "staticfiles_build"
       }
+    },
+    {
+      "src": "triplog_backend/triplog_backend/wsgi.py",
+      "use": "@vercel/python"
     },
     {
       "src": "triplog_frontend/package.json",
