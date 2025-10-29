@@ -32,7 +32,19 @@
       "dest": "/triplog_frontend/robots.txt"
     },
     {
-      "src": "/(.*\\..*)",
+      "src": "/logo192.png",
+      "dest": "/triplog_frontend/logo192.png"
+    },
+    {
+      "src": "/logo512.png",
+      "dest": "/triplog_frontend/logo512.png"
+    },
+    {
+      "src": "/asset-manifest.json",
+      "dest": "/triplog_frontend/asset-manifest.json"
+    },
+    {
+      "src": "/triplog_frontend/(.*)",
       "dest": "/triplog_frontend/$1"
     },
     {
