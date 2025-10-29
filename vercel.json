@@ -19,13 +19,8 @@
       "dest": "triplog_backend/triplog_backend/wsgi.py"
     },
     {
-
-      "handle": "filesystem"
-    },
-    {
-
       "src": "/(.*)",
-      "dest": "triplog_frontend/build/index.html"
+      "dest": "/triplog_frontend/build/$1"
     }
   ]
 }
