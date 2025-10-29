@@ -2,20 +2,13 @@
   "version": 2,
   "builds": [
     {
-      "src": "vercel-build.sh",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "staticfiles_build"
-      }
-    },
-    {
-      "src": "triplog_backend/triplog_backend/wsgi.py",
-      "use": "@vercel/python"
-    },
-    {
       "src": "triplog_frontend/package.json",
       "use": "@vercel/static-build",
       "config": { "distDir": "build" }
+    },
+    {
+      "src": "build.sh",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
@@ -33,7 +26,7 @@
     },
     {
       "src": "/api/(.*)",
-      "dest": "triplog_backend/triplog_backend/wsgi.py"
+      "dest": "build.sh"
     },
     {
       "src": "/(.*)",
